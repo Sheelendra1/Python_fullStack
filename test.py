@@ -129,14 +129,20 @@
 # greeting according to time take time in 24
 
 
-time = int(input("Enter hours"))
-if 5 <= time < 12:
-    print("Good morning")
-elif 12 <= time < 17:
-    print("Good afternoon")
-elif 17 <= time < 21:
-    print("Good evening")
-elif 0 <= time < 5 or 21 <= time <= 23:
-    print("Good night")
-else:
-    print("enter time b/w 0 to 24")
+# time = int(input("Enter hours"))
+# if 5 <= time < 12:
+#     print("Good morning")
+# elif 12 <= time < 17:
+#     print("Good afternoon")
+# elif 17 <= time < 21:
+#     print("Good evening")
+# elif 0 <= time < 5 or 21 <= time <= 23:
+#     print("Good night")
+# else:
+#     print("enter time b/w 0 to 24")
+
+# table of numberr n--------------------------------
+
+n = int(input("Enter the number"))
+for i in range(1,11):
+    print(n, "X", i, "= ", n*i)
