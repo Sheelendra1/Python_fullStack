@@ -1,0 +1,5 @@
+ci/cd
+blue green strat.
+load balancer
+shifting from v1 ---> v2
+
