@@ -60,9 +60,9 @@ def random_number():
     while(True):
         guess = int(input("Enter you guess: "))
 
-        if guess < number:
+        if(guess < number):
             print("too low guess again")
-        elif guess>number:
+        elif(guess>number):
             print("too high guess again")
         else:
             print("greate you guess right number ", number)
