@@ -51,4 +51,22 @@
 
 # build_profile(name = "Sheelendra", city = "Mathura", country="india")
 
+import random
+def random_number():
+    number = random.randint(1,10)
 
+    print("Guess a number between 1 to 10")
+
+    while(True):
+        guess = int(input("Enter you guess: "))
+
+        if guess < number:
+            print("too low guess again")
+        elif guess>number:
+            print("too high guess again")
+        else:
+            print("greate you guess right number ", number)
+            break
+
+
+random_number()
