@@ -1,3 +1,4 @@
+import copy
 # items = {
 #     "Banana": "fruit",
 #     "Apple": "fruit",
@@ -68,15 +69,32 @@
 # print(len("color"))
 
 
+# items = {
+#     "Banana": "fruit",
+#     "Apple": "fruit",
+# }
+# color = {
+#         "blue" : "yes",
+#         "yellow" : "no"
+# }
+
+# mixed = items | color
+
+# print(mixed)
+
+# ---------------------------------------
+
 items = {
     "Banana": "fruit",
     "Apple": "fruit",
+    "value":[10, 20]
 }
-color = {
-        "blue" : "yes",
-        "yellow" : "no"
-}
+# Shallow copy
+# another_items = items.copy()
 
-mixed = items | color
-
-print(mixed)
+# deep 
+more = copy.deepcopy(items)
+more['value'].append(30)
+print(items)
+print(more)
+# print(another_items)
