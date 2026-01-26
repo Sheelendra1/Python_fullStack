@@ -1,5 +1,6 @@
 score = 0
-while True:
+i = 1
+while i<=5:
     select = int(input("1. Start quiz\n2. Exit\n"))
     if (select == 1):
         questions = [
@@ -20,14 +21,18 @@ while True:
              "ans": 4}
         ]
         for q in questions:
+            i +=1
             print(q["q"])
             print(q["options"])
             ans = int(input("Your answer: "))
             if ans == q["ans"]:
                 score += 1
         print("Your score: ", score," out of 5")
-        break
+        # break
     elif select == 2:
+        print("Exiting")
         break
     else:
         print("Invalid choice")
+else:
+    print("You have done with your exam")
