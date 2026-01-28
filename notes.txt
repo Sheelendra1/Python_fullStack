@@ -3,3 +3,7 @@ blue green strat.
 load balancer
 shifting from v1 ---> v2
 
+28
+create a class bank and use encapsulation
+creating method 
+make one attribute as private
