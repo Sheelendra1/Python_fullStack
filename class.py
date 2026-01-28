@@ -58,3 +58,22 @@
 # Bank = Bank_Accounts("Sheelendra", 19)
 
 
+class Employee:
+    def __init__(self, name, salary, empID):
+        self.name=name
+        self.salary=salary
+        self.empID= empID
+
+    def ann_Salary(self):
+        print(f"{self.name}'s Annual Salary is {self.salary*12}")
+    
+    def work_day(self):
+        perday = self.salary/30
+        workingDays = int(input("Total Working days:- "))
+        print(f"Salary of {workingDays} worinkg is {perday*workingDays}")
+
+
+E1 = Employee("Harsh", 40000, 12322)
+
+E1.ann_Salary()
+E1.work_day()
