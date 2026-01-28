@@ -10,7 +10,7 @@ except ValueError:
     print("Enter a valid number!")
     
 else:
-    print("Result is", res)
+    print("Result is", result)
     
 finally:
     print("Execution complete.")
