@@ -85,5 +85,33 @@ GROUP BY Customers.customer_id, Customers.first_name, Customers.last_name;
 
 
 
+-- find customers who have spent more than 500 in total-----------------------------------
 
 
+SELECT 
+    Customers.customer_id,
+    Customers.first_name,
+    Customers.last_name,
+    COUNT(Orders.order_id) AS total_orders
+FROM Customers
+INNER JOIN Orders
+ON Customers.customer_id = Orders.customer_id
+GROUP BY Customers.customer_id, Customers.first_name, Customers.last_name;
+HAVING SUM(Orders.amount) > 500;
+
+
+
+--find the customers who ordered item not ordered by any USA Customer-------------------------
+
+--find the customers who placed orderd but shipping is Delivered---------------------------------------
+
+SELECT
+    Customers.customer_id,
+    Customers.first_name,
+    Customers.last_name
+FROM Customers
+INNER JOIN Orders
+    ON Customers.customer_id = Orders.customer_id
+LEFT JOIN Shippings
+    ON Orders.order_id = Shippings.shipping_id
+WHERE Shippings.status = 'Delivered';
