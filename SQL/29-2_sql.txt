@@ -39,7 +39,7 @@ SELECT *
   ON Customers.Customer_id = Orders.Customer_id;
 
 --Show Customer name, items, and amount-------------------------------------
-
+--inner join
 SELECT 
     Customers.first_name,
     Customers.last_name,
@@ -48,6 +48,21 @@ SELECT
 FROM Customers
 INNER JOIN Orders
 ON Customers.customer_id = Orders.customer_id;
+
+--right join
+SELECT 
+Customers.first_name,
+Customers.last_name,
+Orders.item,
+Orders.amount
+FROM Customers
+LEFT JOIN Orders
+ON Customers.customer_id = Orders.customer_id;
+
+
+
+
+
 
 
 
