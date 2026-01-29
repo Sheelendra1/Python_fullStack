@@ -115,3 +115,20 @@ INNER JOIN Orders
 LEFT JOIN Shippings
     ON Orders.order_id = Shippings.shipping_id
 WHERE Shippings.status = 'Delivered';
+
+
+---------questions----------------------------------------------------------
+
+-- Online SQL Editor to Run SQL Online.
+-- Use the editor to create new tables, insert data and all other SQL operations.
+  
+--Show Customer name, items, and amount
+
+
+--Show customers who orderes keyboard
+--number of orders per customers and show name of customers
+
+-- find customers who have spent more than 500 in total
+--find the customers who ordered item not ordered by any USA Customer
+--find the customers who ordered same item as john Reinhardt
+--find the customers who placed orderd but shipping is Delivered
