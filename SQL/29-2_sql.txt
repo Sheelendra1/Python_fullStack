@@ -59,8 +59,29 @@ FROM Customers
 LEFT JOIN Orders
 ON Customers.customer_id = Orders.customer_id;
 
+--Show customers who orderes keyboard----------------------------------
 
+SELECT 
+Customers.first_name,
+Customers.last_name,
+Orders.item,
+Orders.amount
+FROM Customers
+LEFT JOIN Orders
+ON Customers.customer_id = Orders.customer_id
+WHERE Orders.item = 'Keyboard';
 
+--number of orders per customers and show name of customers-------------------------------
+
+SELECT 
+    Customers.customer_id,
+    Customers.first_name,
+    Customers.last_name,
+    COUNT(Orders.order_id) AS total_orders
+FROM Customers
+INNER JOIN Orders
+ON Customers.customer_id = Orders.customer_id
+GROUP BY Customers.customer_id, Customers.first_name, Customers.last_name;
 
 
 
