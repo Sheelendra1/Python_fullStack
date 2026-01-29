@@ -1,0 +1,50 @@
+CREATE DATABASE college;
+
+USE college;
+CREATE TABLE student (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT NOT NULL
+);
+
+CREATE DATABASE college_db;
+
+USE college_db;
+
+CREATE TABLE students (
+	id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT NOT NULL,
+    roll_no INT NOT NULL,
+    grade CHAR(25),
+    marks INT NOT NULL,
+    city VARCHAR(100)
+);
+
+SELECT * FROM students;
+
+INSERT INTO students (id, name, age, roll_no, grade, marks, city)
+VALUES
+(1, 'Amit Kumar', 20, 01, 'O', 76, 'jalandhar'),
+(2, 'Harshit gard', 5, 02, 'O', 88, 'UP'),
+(3, 'Dinesh', 92, 03, 'A', 90, 'Delhi'),
+(4, 'Sheelendra Singh', 19, 04, 'D', 10, 'Mathura');
+
+INSERT INTO students (id, name, age, roll_no, grade, marks, city)
+VALUES
+(5, 'anil', 16, 05, 'C', 40, 'Pune'),
+(6, 'bhumika', 23, 06, 'F', 18, 'Mumbai'),
+(7, 'dhruv', 18, 07, 'B', 82, 'Delhi');
+
+
+SELECT marks FROM students WHERE marks>40;
+SELECT * FROM students limit 3;
+
+SELECT MAX(marks) FROM students;
+
+SELECT MIN(marks) FROM students;
+
+SELECT AVG(marks) FROM students;
+
+SELECT city, COUNT(name) FROM students GROUP BY city;
+
