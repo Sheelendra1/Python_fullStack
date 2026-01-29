@@ -31,5 +31,23 @@ operations
   INNER JOIN Orders
   ON Customers.Customer_id = Orders.Customer_id;
 
+left JOIN---------------------------------------
+
+SELECT *
+  FROM Customers
+  LEFT JOIN Orders
+  ON Customers.Customer_id = Orders.Customer_id;
+
+--Show Customer name, items, and amount-------------------------------------
+
+SELECT 
+    Customers.first_name,
+    Customers.last_name,
+    Orders.item,
+    Orders.amount
+FROM Customers
+INNER JOIN Orders
+ON Customers.customer_id = Orders.customer_id;
+
 
 
