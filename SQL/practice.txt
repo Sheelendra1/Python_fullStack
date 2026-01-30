@@ -40,3 +40,27 @@ SELECT COUNT(*) AS total_admissions
 FROM admissions;
 
 SELECT * FROM admissions WHERE admission_date = discharge_date;
+
+ -- firstname, lastname, items, amount, only the customer who have placesd orderes----------------------------
+ SELECT 
+ first_name,
+ last_name,
+ amount,
+ item
+ FROM Customers
+ left JOIN ORDERS
+ ON Customers.customer_id = Orders.customer_id
+WHERE item IS NOT NULL;
+
+----------age above avg age------------------------------
+SELECT * from customers
+where age>(
+SELECT AVG(age) FROM Customers);
+
+--write a query to find customers who have placed atlead one order-------------------------------------
+SELECT * 
+FROM Customers 
+WHERE customer_id IN (
+  SELECT customer_id
+  FROM Orders
+);
