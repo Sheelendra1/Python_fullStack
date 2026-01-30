@@ -35,3 +35,8 @@ WHERE YEAR(birth_date) IS 2010;
 select first_name, last_name, max(height) FROM patients;
 
 select * FROM patients WHERE patient_id IN(1,45,534,879,1000); 
+
+SELECT COUNT(*) AS total_admissions
+FROM admissions;
+
+SELECT * FROM admissions WHERE admission_date = discharge_date;
